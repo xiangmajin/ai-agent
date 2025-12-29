@@ -1,0 +1,26 @@
+package com.xidian.aiagent.tools;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class FileOperationToolTest {
+
+    @Test
+    public void testReadFile() {
+        FileOperationTool tool = new FileOperationTool();
+        String fileName = "恋爱大师.txt";
+        String result = tool.readFile(fileName);
+        System.out.println(result);
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testWriteFile() {
+        FileOperationTool tool = new FileOperationTool();
+        String fileName = "恋爱大师.txt";
+        String content = "https://www.codefather.cn 程序员编程学习交流社区";
+        String result = tool.writeFile(fileName, content);
+        assertNotNull(result);
+    }
+}
